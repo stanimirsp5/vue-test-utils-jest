@@ -1,9 +1,19 @@
 <template>
     <ul>
-        <li v-for="(message,i) in messages"
+        <li class="message"
+            v-for="(message,i) in messages"
             v-bind:key="i">
             {{ message }}
         </li>
     </ul>
 </template>
-<script> export default { name: "list", props: ["messages"] }; </script>
+<script>
+import Message from "./Message";
+
+export default {
+    name: "list",
+    props: ["messages"],
+    components: { Message }
+
+};
+   </script>
