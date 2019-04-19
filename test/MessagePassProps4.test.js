@@ -9,9 +9,6 @@ const createCmp = propsData => mount(Message, {
 describe("Message.test.js", () => {
   let cmp;
   describe('Properties', () => {
-
-
-
     it("is cat property exists", () => {
       cmp = createCmp({
         cat: "hey",
@@ -62,4 +59,18 @@ describe("Message.test.js", () => {
     // })
 
   })
+
+  // describe("Events", () => {
+  //   beforeEach(() => {
+  //     cmp = createCmp({
+  //       message: "Cat"
+  //     });
+  //   });
+  //   it("calls handleClick when click on message", () => {
+  //     const wrapper = mount(Message)
+  //     const handler = wrapper.find(".message");
+  //     handler.trigger("click");
+  //     expect(handler.vm.handleClick).toBeCalled();
+  //   });
+  // });
 })

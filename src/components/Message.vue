@@ -1,6 +1,8 @@
 <template>
     <li style="padding-top: 10px"
-        class="message">{{ message }}</li>
+        class="message"
+        @click="handleClick">{{ message }}
+    </li>
 </template>
 
 <script>
@@ -12,7 +14,6 @@ export default {
         },
         message2: {
             type: String,
-            required: true,
             validator: message => message.length > 1
 
         },
@@ -22,6 +23,11 @@ export default {
         }
 
     },
+    methods: {
+        handleClick() {
+            this.$emit("message-clicked", this.message)
+        }
+    }
 
 };
 </script>
